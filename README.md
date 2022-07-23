@@ -26,12 +26,12 @@ docker build -t node-cli-sample .
 2. Rodar a imagem localmente
 
 ```
-docker run --name node-cli -d node-cli
+docker run --name node-cli-sample -d node-cli-sample
 ```
 
 3. Visualizar o log do container
 ```
-docker logs -f node-cli
+docker logs -f node-cli-sample
 ```
 
 4. Verificar que o container não está mais ativo
