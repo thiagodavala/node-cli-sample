@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: node-cli-sample
+spec:
+  schedule: "*/1 * * * *" 
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: node-cli-sample
+            image: node-cli-sample
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
